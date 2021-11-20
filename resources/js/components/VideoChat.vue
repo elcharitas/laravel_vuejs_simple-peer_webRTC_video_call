@@ -55,7 +55,8 @@ export default {
           delete this.peers[userId];
         });
         this.peers[userId] = peer;
-      } 
+      }
+      this.peers[userId].signal({});
       return this.peers[userId];
     },
     async setupVideoChat() {
